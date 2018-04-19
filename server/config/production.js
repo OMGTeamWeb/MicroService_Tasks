@@ -3,7 +3,7 @@ module.exports = {
   logging: true,
   db: {
     //crear BD
-    url: 'mongodb://localhost/omgtask'
+    url: 'mongo ds015928.mlab.com:15928/heroku_lqvjtf0d -u test -p test'
     //url: 'mongodb://localhost/funmath-dev'
   }
 };
