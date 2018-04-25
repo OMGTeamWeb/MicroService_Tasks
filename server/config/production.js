@@ -1,6 +1,6 @@
 module.exports = {
   // disbable logging for production
-  logging: true,
+  logging: false,
   db: {
     //crear BD
     url: 'mongodb://test:test@ds015928.mlab.com:15928/heroku_lqvjtf0d'

@@ -17,11 +17,9 @@ exports.params = function(req, res, next, id, userId) {
 exports.paramsbyUser = function(req, res, next, userId) {
   Task.find({"userId": userId})
     .then(function(task) {
-      console.log("HOLIs");
       if (!task) {
         next(new Error('There is no task with that id'));
       } else {
-        console.log(":O "+ task);
         req.userId = task;
         next();
       }
@@ -31,7 +29,6 @@ exports.paramsbyUser = function(req, res, next, userId) {
 };
 
 exports.getbyUser = function(req, res, next){
-  console.log("USERID "+ req.userId);
   var task = req.userId;
   res.json(task);
 }
@@ -53,7 +50,6 @@ exports.getOne = function(req, res, next) {
 
 
 exports.put = function(req, res, next) {
-  console.log("WOW "+ req.task);
   var task = req.task;
 
   var update = req.body;
